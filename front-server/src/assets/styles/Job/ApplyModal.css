@@ -1,0 +1,121 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  backdrop-filter: blur(3px);
+  font-size: 18px;
+}
+
+.modal > section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  animation: modal-show 0.3s;
+  overflow: hidden;
+}
+
+.modal > section > main {
+  padding: 16px;
+  border: 1px solid lightgray;
+  /* Modal Size */
+  max-height: 600px;
+  overflow: auto;
+}
+.close {
+  margin-top: -5px;
+}
+.modal.openModal {
+  display: flex;
+  align-items: center;
+  animation: modal-bg-show 0.3s;
+}
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Modal-container {
+  margin: 60px;
+}
+
+.Modal-line-container {
+  display: flex;
+  margin: 25px 0 0;
+  align-items: center;
+}
+
+.Modal-flexgrow1 {
+  width: 200px;
+}
+
+.Modal-flexgrow2 {
+  width: 100%;
+  margin: 15px 0 15px 0;
+}
+
+.Close-button {
+  cursor: pointer;
+}
+
+.Button-container {
+  justify-content: end;
+  margin: 20px 0 -10px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .Modal-container {
+    margin: 30px;
+  }
+  .Button-container {
+    justify-content: flex-start;
+    margin: 50px 0 0 0;
+  }
+  .modal > section > main {
+    padding: 16px;
+    border: 1px solid lightgray;
+    /* Modal Size */
+    max-height: 700px;
+    overflow: auto;
+  }
+  .Modal-flexgrow1 {
+    flex-grow: 0.5;
+    /* width: 100%; */
+    margin: 0px;
+  }
+}
+@media screen and (min-width: 701px) {
+  .Modal-container {
+    margin: 40px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .Modal-container {
+    margin: 60px;
+  }
+}
